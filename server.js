@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const app = express();
 const port = 8000;
@@ -17,4 +18,20 @@ app.get("/users", function (request, response){
     {name: "Andrew", email: "andrew@codingdojo.com"},
   ];
   response.render("users", {users: users_array});
+})
+
+app.get("/cars", function (request, response){
+  response.render("cars");
+})
+
+app.get("/cats", function (request, response){
+  response.render("cats");
+})
+
+app.get("/cars/new", function (request, response){
+  response.render("new");
+})
+
+app.get("/", function (request, response){
+  response.render("index.html");
 })
