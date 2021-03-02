@@ -20,12 +20,39 @@ app.get("/users", function (request, response){
   response.render("users", {users: users_array});
 })
 
+const gatitos = [
+  {
+    id: 1,
+    nombre: "Tom",
+    imagen: "maine.jpg",
+    comidafav: "atun",
+    edad: 3,
+    cama: ["ropero", "sofa"]
+  },
+  {
+    id: 2,
+    nombre: "Tom",
+    imagen: "persian.jpg",
+    comidafav: "atun",
+    edad: 3,
+    cama: ["ropero", "sofa"]
+  },
+  {
+    id: 3,
+    nombre: "Tom",
+    imagen: "serengeti.jpg",
+    comidafav: "atun",
+    edad: 3,
+    cama: ["ropero", "sofa"]
+  }
+]
+
 app.get("/cars", function (request, response){
   response.render("cars");
 })
 
 app.get("/cats", function (request, response){
-  response.render("cats");
+  response.render("cats", {gatitos});
 })
 
 app.get("/cars/new", function (request, response){
